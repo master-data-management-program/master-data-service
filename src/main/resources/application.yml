@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: MASTER-DATA-MANAGEMENT-API-V1
+
+
+data.endpoint: "/master/data/management/v1"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: ["env","beans"]
+eureka:
+  instance:
+    secure-port-enabled: false
+  client:
+    enabled: false
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://property:property@localhost:8761/eureka/
+
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    secure-port-enabled: true
+  client:
+    enabled: true
+    service-url:
+      defaultZone: https://property:property@eureka-cups-v1-cloud-property.cfapps.io/eureka/
