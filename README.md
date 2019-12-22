@@ -18,7 +18,7 @@ Header - "Content-Type:application/json"
     '''
     {
     "tableName":"<NEW-COLLECTION-NAME>",
-    "fields":"{\"assetId\":\"number\"}",
+    "fields":"{\"assetId\":102,\"name\":\"wheelPart1\",\"address\": \"address\",\"mandatory\":false}",
     "status":"ACTIVE",
     "createdBy":"Admin",
     "createdDateTime":"2019-12-20T19:38:03.180Z[Europe/London]"
